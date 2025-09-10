@@ -15,14 +15,14 @@ int main() {
     //carta n1
     char codigocidadeum[5], nomeum[50];
     int populacaoum, pontosturisticosum;
-    float areaum;
-    double pibum;
+    float areaum, densidadepopum;
+    double pibum, pibcapitaum;
 
     //carta n2
     char codigocidadedois[5], nomedois[50];
     int populacaodois, pontosturisticosdois;
-    float areadois;
-    double pibdois;
+    float areadois, densidadepopdois;
+    double pibdois, pibcapitadois;
     
 
 
@@ -52,6 +52,10 @@ int main() {
     scanf("%lf", &pibum);
 
 
+    //calculos carta n1
+    densidadepopum = populacaoum / areaum;
+    pibcapitaum = pibum / populacaoum;
+
 
      // Retorno dos dados da carta1 do usuário.
     printf("Dados da Carta 1 \n");
@@ -61,6 +65,8 @@ int main() {
     printf("Pontos turísticos: %d\n", pontosturisticosum);
     printf("Área da cidade: %.2f km²\n", areaum);
     printf("PIB da cidade: R$%.2f\n", pibum); 
+    printf("Densidade populacional: %.1f\n", densidadepopum);
+    printf("PIB per capita: R$%.2f\n", pibcapitaum); 
 
 
 
@@ -68,7 +74,7 @@ int main() {
     printf("Digite o código da cidade 2: ");
     scanf("%s", codigocidadedois);
 
-     printf("Digite o nome da cidade 2: ");
+    printf("Digite o nome da cidade 2: ");
     scanf("%s", nomedois);
 
     printf("Digite a população da cidade 2: ");
@@ -84,6 +90,10 @@ int main() {
     scanf("%lf", &pibdois);
 
 
+    //calculos carta n2
+    densidadepopdois = populacaodois / areadois;
+    pibcapitadois = pibdois / populacaodois;
+
      // Retorno dos dados da carta2 do usuário.
     printf("Dados da Carta 2\n");
     printf("Código da cidade: %s\n", codigocidadedois);
@@ -91,7 +101,9 @@ int main() {
     printf("População da cidade: %d habitantes\n", populacaodois);
     printf("Pontos turísticos: %d\n", pontosturisticosdois);
     printf("Área da cidade: %.2f km²\n", areadois); 
-    printf("PIB da cidade: R$%.2f\n", pibdois); 
+    printf("PIB da cidade: R$%.2f\n", pibdois);
+    printf("Densidade populacional: %.1f\n", densidadepopdois); 
+    printf("PIB per capita: R$%.2f\n", pibcapitadois); 
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
